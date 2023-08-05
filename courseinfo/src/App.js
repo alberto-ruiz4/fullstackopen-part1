@@ -1,4 +1,5 @@
 const Header = (props) => {
+  console.log('Header props', props);
   return(
     <h1>
       {props.course}
@@ -6,7 +7,8 @@ const Header = (props) => {
   );
 }
 
-export const Part = (props) => {
+const Part = (props) => {
+  console.log('Part props', props);
   return(
     <p>
       {props.name} {props.exercises}
@@ -14,7 +16,8 @@ export const Part = (props) => {
   );
 }
 
-export const Content = (props) => {
+const Content = (props) => {
+  console.log('Content props', props);
   return (
     <div>
       <Part name={props.part1} exercises={props.exercises1} />
@@ -24,7 +27,7 @@ export const Content = (props) => {
   );
 }
 
-export const Total = (props) => {
+const Total = (props) => {
   return(
     <p>Number of exercises {props.exercises1 + props.exercises2 + props.exercises3}</p>
   );
